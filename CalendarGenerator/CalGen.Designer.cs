@@ -237,11 +237,11 @@
             this.cellOneOne.Font = new System.Drawing.Font("Verdana", 9F);
             this.cellOneOne.Location = new System.Drawing.Point(5, 70);
             this.cellOneOne.Margin = new System.Windows.Forms.Padding(0);
-            this.cellOneOne.MaximumSize = new System.Drawing.Size(270, 162);
+            this.cellOneOne.MaximumSize = new System.Drawing.Size(250, 130);
             this.cellOneOne.MaxLength = 248;
-            this.cellOneOne.MinimumSize = new System.Drawing.Size(270, 162);
+            this.cellOneOne.MinimumSize = new System.Drawing.Size(250, 130);
             this.cellOneOne.Name = "cellOneOne";
-            this.cellOneOne.Size = new System.Drawing.Size(270, 162);
+            this.cellOneOne.Size = new System.Drawing.Size(250, 130);
             this.cellOneOne.TabIndex = 13;
             this.cellOneOne.Text = "";
             this.cellOneOne.TextChanged += new System.EventHandler(this.cellOneOne_TextChanged);
@@ -434,9 +434,9 @@
             // resetBtn
             // 
             this.resetBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetBtn.Location = new System.Drawing.Point(1664, 893);
+            this.resetBtn.Location = new System.Drawing.Point(1665, 247);
             this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(101, 44);
+            this.resetBtn.Size = new System.Drawing.Size(100, 45);
             this.resetBtn.TabIndex = 28;
             this.resetBtn.Text = "Reset";
             this.resetBtn.UseVisualStyleBackColor = true;
@@ -945,17 +945,19 @@
             // createBtn
             // 
             this.createBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createBtn.Location = new System.Drawing.Point(1771, 893);
+            this.createBtn.Location = new System.Drawing.Point(1775, 247);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(101, 44);
+            this.createBtn.Size = new System.Drawing.Size(100, 45);
             this.createBtn.TabIndex = 70;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // datePicker
             // 
             this.datePicker.Font = new System.Drawing.Font("Verdana", 9F);
-            this.datePicker.Location = new System.Drawing.Point(1657, 704);
+            this.datePicker.Location = new System.Drawing.Point(1655, 70);
+            this.datePicker.MaxSelectionCount = 1;
             this.datePicker.Name = "datePicker";
             this.datePicker.TabIndex = 71;
             this.datePicker.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.datePicker_DateChanged);

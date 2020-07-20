@@ -17,7 +17,6 @@ namespace CalendarGenerator
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CalGenUI());
-            //GenerateCalendar.Run(new List<string>());
         }
     }
 }
