@@ -1,21 +1,15 @@
 ﻿/*
- * Changes Counseling Monthly Group Calendar
- * Using .NET 4.7 and PDFSharp libraries.
- * Developed by Scott Smalley
- * 
- * INFO
+ * Group Therapy Calendar PDF Generator
+ * Stakeholder: Changes Counseling
+ * Developer: Scott Smalley
  * scottsmalley90@gmail.com
+ * scottsmalley.net
  */
 using PdfSharp.Drawing;
 using PdfSharp.Drawing.Layout;
 using PdfSharp.Pdf;
-using PdfSharp.Pdf.IO;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalendarGenerator
 {
@@ -38,7 +32,7 @@ namespace CalendarGenerator
 
             //Calendar Month & Year
             XFont font = new XFont(FONT_TYPE, 32, XFontStyle.Bold);
-            gfx.DrawString("July 2020", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.125, 35, 0, 0), XStringFormats.Center);
+            gfx.DrawString(monthYear, font, XBrushes.Black, new XRect(PDF_WIDTH * 0.125, 35, 0, 0), XStringFormats.Center);
 
             //Appointments Information
             font = new XFont(FONT_TYPE, 10, XFontStyle.Regular);
@@ -74,45 +68,24 @@ namespace CalendarGenerator
             //Date Numbers
             font = new XFont(FONT_TYPE, 12, XFontStyle.Regular);
 
-            //1st Row
-            gfx.DrawString("29", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.156, 125, 0, 0), XStringFormats.Center);
-            gfx.DrawString("30", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.322, 125, 0, 0), XStringFormats.Center);
-            gfx.DrawString("1", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.488, 125, 0, 0), XStringFormats.Center);
-            gfx.DrawString("2", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.654, 125, 0, 0), XStringFormats.Center);
-            gfx.DrawString("3", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.820, 125, 0, 0), XStringFormats.Center);
-            gfx.DrawString("4", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.99, 125, 0, 0), XStringFormats.Center);
-
-            //2nd Row
-            gfx.DrawString("6", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.156, 255, 0, 0), XStringFormats.Center);
-            gfx.DrawString("7", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.322, 255, 0, 0), XStringFormats.Center);
-            gfx.DrawString("8", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.488, 255, 0, 0), XStringFormats.Center);
-            gfx.DrawString("9", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.654, 255, 0, 0), XStringFormats.Center);
-            gfx.DrawString("10", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.820, 255, 0, 0), XStringFormats.Center);
-            gfx.DrawString("11", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.99, 255, 0, 0), XStringFormats.Center);
-
-            //3rd Row
-            gfx.DrawString("13", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.156, 385, 0, 0), XStringFormats.Center);
-            gfx.DrawString("14", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.322, 385, 0, 0), XStringFormats.Center);
-            gfx.DrawString("15", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.488, 385, 0, 0), XStringFormats.Center);
-            gfx.DrawString("16", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.654, 385, 0, 0), XStringFormats.Center);
-            gfx.DrawString("17", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.820, 385, 0, 0), XStringFormats.Center);
-            gfx.DrawString("18", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.99, 385, 0, 0), XStringFormats.Center);
-
-            //4th Row
-            gfx.DrawString("20", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.156, 515, 0, 0), XStringFormats.Center);
-            gfx.DrawString("21", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.322, 515, 0, 0), XStringFormats.Center);
-            gfx.DrawString("22", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.488, 515, 0, 0), XStringFormats.Center);
-            gfx.DrawString("23", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.654, 515, 0, 0), XStringFormats.Center);
-            gfx.DrawString("24", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.820, 515, 0, 0), XStringFormats.Center);
-            gfx.DrawString("25", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.99, 515, 0, 0), XStringFormats.Center);
-
-            //5th Row
-            gfx.DrawString("27", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.156, 645, 0, 0), XStringFormats.Center);
-            gfx.DrawString("28", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.322, 645, 0, 0), XStringFormats.Center);
-            gfx.DrawString("29", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.488, 645, 0, 0), XStringFormats.Center);
-            gfx.DrawString("30", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.654, 645, 0, 0), XStringFormats.Center);
-            gfx.DrawString("31", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.820, 645, 0, 0), XStringFormats.Center);
-            gfx.DrawString("1", font, XBrushes.Black, new XRect(PDF_WIDTH * 0.99, 645, 0, 0), XStringFormats.Center);
+            int xPosition = 160;
+            int yPosition = 125;
+            int cellCtr = 0;
+            for (int drawCalDatesIdx = 0; drawCalDatesIdx < 30; drawCalDatesIdx++)
+            {
+                gfx.DrawString(dates[drawCalDatesIdx],
+                font,
+                XBrushes.Black,
+                new XRect(xPosition, yPosition, 0, 0),
+                XStringFormats.Center);
+                xPosition += xPosition <= 670 ? 170 : 174;
+                cellCtr++;
+                if (cellCtr % 6 == 0)
+                {
+                    xPosition = 160;
+                    yPosition += 130;
+                }
+            }
 
             //Cell Content
             font = new XFont(FONT_TYPE, 10, XFontStyle.Regular);
@@ -120,203 +93,24 @@ namespace CalendarGenerator
             XTextFormatter tf = new XTextFormatter(gfx);
             tf.Alignment = XParagraphAlignment.Left;
 
-            //double xPosition = 0.014;
-            //double yPosition = 135;
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    tf.DrawString(cellData[i],
-            //    font,
-            //    XBrushes.Black,
-            //    new XRect(PDF_WIDTH * 0.014, 135, 170, 130),
-            //    XStringFormats.TopLeft);
-            //}
-
-            //1ST ROW
-            tf.DrawString(cellData[0],
+            xPosition = 5;
+            yPosition = 135;
+            cellCtr = 0;
+            for (int drawCalContentIdx = 0; drawCalContentIdx < 30; drawCalContentIdx++)
+            {
+                tf.DrawString(cellData[drawCalContentIdx],
                 font,
                 XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.014, 135, 170, 130),
+                new XRect(xPosition, yPosition, 165, 130),
                 XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.18, 135, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.346, 135, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.512, 135, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.678, 135, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.84, 135, 170, 130),
-                XStringFormats.TopLeft);
-
-
-            //2ND ROW
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.014, 265, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.18, 265, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.346, 265, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.512, 265, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.678, 265, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.84, 265, 170, 130),
-                XStringFormats.TopLeft);
-
-            //3RD ROW
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.014, 395, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.18, 395, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.346, 395, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.512, 395, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.678, 395, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.84, 395, 170, 130),
-                XStringFormats.TopLeft);
-
-            //4TH ROW
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.014, 525, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.18, 525, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.346, 525, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.512, 525, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.678, 525, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.84, 525, 170, 130),
-                XStringFormats.TopLeft);
-
-            //5TH ROW
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.014, 655, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.18, 655, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.346, 655, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.512, 655, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.678, 655, 170, 130),
-                XStringFormats.TopLeft);
-
-            tf.DrawString("10:00 am-4 Thinking Error\n        Basics 6hr Workshop\n11:00 am-3 Prime for Life #1\n4:00 pm Men's & Women's\nDV Group\n5:00 pm Men's & Women's\nA&D Group\nProfit",
-                font,
-                XBrushes.Black,
-                new XRect(PDF_WIDTH * 0.84, 655, 170, 130),
-                XStringFormats.TopLeft);
-
+                xPosition += 170;
+                cellCtr++;
+                if (cellCtr % 6 == 0)
+                {
+                    xPosition = 5;
+                    yPosition += 130;
+                }
+            }
 
             //Calendar Grid Lines
             XPen pen = new XPen(XColor.FromKnownColor(XKnownColor.Black));
@@ -339,12 +133,10 @@ namespace CalendarGenerator
             gfx.DrawLine(pen, 0, 638, PDF_WIDTH, 638);
             gfx.DrawLine(pen, 0, 768, PDF_WIDTH, 768);
 
-            const string filename = "StandInName.pdf";
+            string filename = $"{monthYear.Replace(" ", "")}.pdf";
             document.Save(filename);
 
             Process.Start(filename);
-
-            //NOTE: at 10pt font, Could fit 31 characters per line in original calendar.
         }
     }
 }

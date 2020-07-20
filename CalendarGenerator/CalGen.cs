@@ -1,12 +1,13 @@
-﻿using System;
+﻿/*
+ * Group Therapy Calendar PDF Generator
+ * Stakeholder: Changes Counseling
+ * Developer: Scott Smalley
+ * scottsmalley90@gmail.com
+ * scottsmalley.net
+ */
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CalendarGenerator
@@ -18,10 +19,15 @@ namespace CalendarGenerator
         public CalGenUI()
         {
             InitializeComponent();
-            DoStuff();
+            BuildUICollections();
         }
 
-        private void DoStuff()
+        /// <summary>
+        /// Build out the collections
+        /// used for modifying the
+        /// labels and the textboxes.
+        /// </summary>
+        private void BuildUICollections()
         {
             labels = new List<Label>();
             textboxes = new List<RichTextBox>();
@@ -181,16 +187,9 @@ namespace CalendarGenerator
         /// <param name="textbox"></param>
         private void CheckLineLengthAndCount(RichTextBox textbox)
         {
-            //if (textbox.Lines.Count() > 0 && textbox.Lines.Last().Length > 30)
-            //{
-            //    string[] words = textbox.Lines.Last().Split(' ');
-            //    Debug.Write($"{textbox.Lines[textbox.Lines.Count()-1]}");
-            //    textbox.Lines[textbox.Lines.Length-1] = ("haha");
-            //    textbox.AppendText(Environment.NewLine + words[words.Length-1]);
-            //}
-            if (textbox.Lines.Count() > 8)
+            if (textbox.Lines.Count() > 9)
             {
-                MessageBox.Show("Calendar will display a maximum of 8 lines.");
+                MessageBox.Show("Calendar will display a maximum of 9 lines.");
             }
         }
 
@@ -203,9 +202,9 @@ namespace CalendarGenerator
         private void resetBtn_Click(object sender, EventArgs e)
         {
             monthYearLbl.Text = "Sample Calendar";
-            for (int i = 0; i < labels.Count(); i++)
+            for (int resetLblIdx = 0; resetLblIdx < labels.Count(); resetLblIdx++)
             {
-                labels[i].Text = $"{i + 1}";
+                labels[resetLblIdx].Text = $"{resetLblIdx + 1}";
             }
 
             foreach(RichTextBox box in textboxes)
@@ -258,7 +257,7 @@ namespace CalendarGenerator
         /// <param name="data"></param>
         private void GenerateCalendarDates(DateTime data)
         {
-            monthYearLbl.Text = $"{getMonthName(data.Month)} {data.Year}";
+            monthYearLbl.Text = $"{GetMonthName(data.Month)} {data.Year}";
 
             /*
              * If the user clicked on a date that isn't the first of the month,
@@ -278,8 +277,10 @@ namespace CalendarGenerator
             {
                 lastMonthDays = DateTime.DaysInMonth(data.Year, data.AddMonths(-1).Month);
                 
-                //"deficit" increment is to account for the lastMonthDays 
-                //number--it counts as a date to use too. So we need to offset the deficit.
+                /*
+                 * "deficit" increment is to account for the lastMonthDays 
+                 * number--it counts as a date to use too. So we need to offset the deficit.
+                 */
                 deficit++;
                 dateCtr = lastMonthDays + deficit;
             }
@@ -375,7 +376,7 @@ namespace CalendarGenerator
         /// </summary>
         /// <param name="monthNum"></param>
         /// <returns></returns>
-        private string getMonthName(int monthNum)
+        private string GetMonthName(int monthNum)
         {
             string month = "Invalid Month";
             switch (monthNum)
@@ -411,18 +412,18 @@ namespace CalendarGenerator
                     break;
 
                 case 9:
-                    month = "September";
+                    month = "Sept";
                     break;
                 case 10:
                     month = "October";
                     break;
 
                 case 11:
-                    month = "November";
+                    month = "Nov";
                     break;
 
                 case 12:
-                    month = "December";
+                    month = "Dec";
                     break;
             }
             return month;

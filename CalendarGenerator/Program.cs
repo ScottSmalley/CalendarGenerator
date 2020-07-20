@@ -1,7 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿/*
+ * Group Therapy Calendar PDF Generator
+ * Stakeholder: Changes Counseling
+ * Developer: Scott Smalley
+ * scottsmalley90@gmail.com
+ * scottsmalley.net
+ */
+using System;
 using System.Windows.Forms;
 
 namespace CalendarGenerator
