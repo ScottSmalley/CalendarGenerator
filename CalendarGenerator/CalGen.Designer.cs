@@ -250,6 +250,8 @@ namespace CalendarGenerator
             this.cellOneOne.MaxLength = 500;
             this.cellOneOne.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellOneOne.Name = "cellOneOne";
+            this.cellOneOne.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cellOneOne.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellOneOne.Size = new System.Drawing.Size(270, 175);
             this.cellOneOne.TabIndex = 1;
             this.cellOneOne.Text = "";
@@ -264,6 +266,7 @@ namespace CalendarGenerator
             this.cellOneTwo.MaxLength = 500;
             this.cellOneTwo.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellOneTwo.Name = "cellOneTwo";
+            this.cellOneTwo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellOneTwo.Size = new System.Drawing.Size(270, 175);
             this.cellOneTwo.TabIndex = 2;
             this.cellOneTwo.Text = "";
@@ -278,6 +281,7 @@ namespace CalendarGenerator
             this.cellOneThree.MaxLength = 500;
             this.cellOneThree.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellOneThree.Name = "cellOneThree";
+            this.cellOneThree.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellOneThree.Size = new System.Drawing.Size(270, 175);
             this.cellOneThree.TabIndex = 3;
             this.cellOneThree.Text = "";
@@ -292,6 +296,7 @@ namespace CalendarGenerator
             this.cellOneFour.MaxLength = 500;
             this.cellOneFour.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellOneFour.Name = "cellOneFour";
+            this.cellOneFour.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellOneFour.Size = new System.Drawing.Size(270, 175);
             this.cellOneFour.TabIndex = 4;
             this.cellOneFour.Text = "";
@@ -306,6 +311,7 @@ namespace CalendarGenerator
             this.cellOneFive.MaxLength = 500;
             this.cellOneFive.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellOneFive.Name = "cellOneFive";
+            this.cellOneFive.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellOneFive.Size = new System.Drawing.Size(270, 175);
             this.cellOneFive.TabIndex = 5;
             this.cellOneFive.Text = "";
@@ -320,6 +326,7 @@ namespace CalendarGenerator
             this.cellOneSix.MaxLength = 500;
             this.cellOneSix.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellOneSix.Name = "cellOneSix";
+            this.cellOneSix.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellOneSix.Size = new System.Drawing.Size(270, 175);
             this.cellOneSix.TabIndex = 6;
             this.cellOneSix.Text = "";
@@ -334,6 +341,7 @@ namespace CalendarGenerator
             this.cellTwoOne.MaxLength = 500;
             this.cellTwoOne.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellTwoOne.Name = "cellTwoOne";
+            this.cellTwoOne.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellTwoOne.Size = new System.Drawing.Size(270, 175);
             this.cellTwoOne.TabIndex = 7;
             this.cellTwoOne.Text = "";
@@ -358,6 +366,7 @@ namespace CalendarGenerator
             this.cellThreeOne.MaxLength = 500;
             this.cellThreeOne.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellThreeOne.Name = "cellThreeOne";
+            this.cellThreeOne.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellThreeOne.Size = new System.Drawing.Size(270, 175);
             this.cellThreeOne.TabIndex = 13;
             this.cellThreeOne.Text = "";
@@ -382,6 +391,7 @@ namespace CalendarGenerator
             this.cellFiveOne.MaxLength = 500;
             this.cellFiveOne.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFiveOne.Name = "cellFiveOne";
+            this.cellFiveOne.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFiveOne.Size = new System.Drawing.Size(270, 175);
             this.cellFiveOne.TabIndex = 25;
             this.cellFiveOne.Text = "";
@@ -406,6 +416,7 @@ namespace CalendarGenerator
             this.cellFourOne.MaxLength = 500;
             this.cellFourOne.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFourOne.Name = "cellFourOne";
+            this.cellFourOne.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFourOne.Size = new System.Drawing.Size(270, 175);
             this.cellFourOne.TabIndex = 19;
             this.cellFourOne.Text = "";
@@ -451,6 +462,7 @@ namespace CalendarGenerator
             this.cellFiveTwo.MaxLength = 500;
             this.cellFiveTwo.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFiveTwo.Name = "cellFiveTwo";
+            this.cellFiveTwo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFiveTwo.Size = new System.Drawing.Size(270, 175);
             this.cellFiveTwo.TabIndex = 26;
             this.cellFiveTwo.Text = "";
@@ -475,6 +487,7 @@ namespace CalendarGenerator
             this.cellFourTwo.MaxLength = 500;
             this.cellFourTwo.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFourTwo.Name = "cellFourTwo";
+            this.cellFourTwo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFourTwo.Size = new System.Drawing.Size(270, 175);
             this.cellFourTwo.TabIndex = 20;
             this.cellFourTwo.Text = "";
@@ -499,6 +512,7 @@ namespace CalendarGenerator
             this.cellThreeTwo.MaxLength = 500;
             this.cellThreeTwo.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellThreeTwo.Name = "cellThreeTwo";
+            this.cellThreeTwo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellThreeTwo.Size = new System.Drawing.Size(270, 175);
             this.cellThreeTwo.TabIndex = 14;
             this.cellThreeTwo.Text = "";
@@ -523,6 +537,7 @@ namespace CalendarGenerator
             this.cellTwoTwo.MaxLength = 500;
             this.cellTwoTwo.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellTwoTwo.Name = "cellTwoTwo";
+            this.cellTwoTwo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellTwoTwo.Size = new System.Drawing.Size(270, 175);
             this.cellTwoTwo.TabIndex = 8;
             this.cellTwoTwo.Text = "";
@@ -547,6 +562,7 @@ namespace CalendarGenerator
             this.cellFiveThree.MaxLength = 500;
             this.cellFiveThree.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFiveThree.Name = "cellFiveThree";
+            this.cellFiveThree.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFiveThree.Size = new System.Drawing.Size(270, 175);
             this.cellFiveThree.TabIndex = 27;
             this.cellFiveThree.Text = "";
@@ -571,6 +587,7 @@ namespace CalendarGenerator
             this.cellFourThree.MaxLength = 500;
             this.cellFourThree.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFourThree.Name = "cellFourThree";
+            this.cellFourThree.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFourThree.Size = new System.Drawing.Size(270, 175);
             this.cellFourThree.TabIndex = 21;
             this.cellFourThree.Text = "";
@@ -595,6 +612,7 @@ namespace CalendarGenerator
             this.cellThreeThree.MaxLength = 500;
             this.cellThreeThree.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellThreeThree.Name = "cellThreeThree";
+            this.cellThreeThree.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellThreeThree.Size = new System.Drawing.Size(270, 175);
             this.cellThreeThree.TabIndex = 15;
             this.cellThreeThree.Text = "";
@@ -619,6 +637,7 @@ namespace CalendarGenerator
             this.cellTwoThree.MaxLength = 500;
             this.cellTwoThree.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellTwoThree.Name = "cellTwoThree";
+            this.cellTwoThree.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellTwoThree.Size = new System.Drawing.Size(270, 175);
             this.cellTwoThree.TabIndex = 9;
             this.cellTwoThree.Text = "";
@@ -643,6 +662,7 @@ namespace CalendarGenerator
             this.cellFiveFour.MaxLength = 500;
             this.cellFiveFour.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFiveFour.Name = "cellFiveFour";
+            this.cellFiveFour.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFiveFour.Size = new System.Drawing.Size(270, 175);
             this.cellFiveFour.TabIndex = 28;
             this.cellFiveFour.Text = "";
@@ -667,6 +687,7 @@ namespace CalendarGenerator
             this.cellFourFour.MaxLength = 500;
             this.cellFourFour.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFourFour.Name = "cellFourFour";
+            this.cellFourFour.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFourFour.Size = new System.Drawing.Size(270, 175);
             this.cellFourFour.TabIndex = 22;
             this.cellFourFour.Text = "";
@@ -691,6 +712,7 @@ namespace CalendarGenerator
             this.cellThreeFour.MaxLength = 500;
             this.cellThreeFour.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellThreeFour.Name = "cellThreeFour";
+            this.cellThreeFour.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellThreeFour.Size = new System.Drawing.Size(270, 175);
             this.cellThreeFour.TabIndex = 16;
             this.cellThreeFour.Text = "";
@@ -715,6 +737,7 @@ namespace CalendarGenerator
             this.cellTwoFour.MaxLength = 500;
             this.cellTwoFour.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellTwoFour.Name = "cellTwoFour";
+            this.cellTwoFour.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellTwoFour.Size = new System.Drawing.Size(270, 175);
             this.cellTwoFour.TabIndex = 10;
             this.cellTwoFour.Text = "";
@@ -739,6 +762,7 @@ namespace CalendarGenerator
             this.cellFiveFive.MaxLength = 500;
             this.cellFiveFive.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFiveFive.Name = "cellFiveFive";
+            this.cellFiveFive.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFiveFive.Size = new System.Drawing.Size(270, 175);
             this.cellFiveFive.TabIndex = 29;
             this.cellFiveFive.Text = "";
@@ -763,6 +787,7 @@ namespace CalendarGenerator
             this.cellFourFive.MaxLength = 500;
             this.cellFourFive.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFourFive.Name = "cellFourFive";
+            this.cellFourFive.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFourFive.Size = new System.Drawing.Size(270, 175);
             this.cellFourFive.TabIndex = 23;
             this.cellFourFive.Text = "";
@@ -787,6 +812,7 @@ namespace CalendarGenerator
             this.cellThreeFive.MaxLength = 500;
             this.cellThreeFive.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellThreeFive.Name = "cellThreeFive";
+            this.cellThreeFive.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellThreeFive.Size = new System.Drawing.Size(270, 175);
             this.cellThreeFive.TabIndex = 17;
             this.cellThreeFive.Text = "";
@@ -811,6 +837,7 @@ namespace CalendarGenerator
             this.cellTwoFive.MaxLength = 500;
             this.cellTwoFive.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellTwoFive.Name = "cellTwoFive";
+            this.cellTwoFive.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellTwoFive.Size = new System.Drawing.Size(270, 175);
             this.cellTwoFive.TabIndex = 11;
             this.cellTwoFive.Text = "";
@@ -835,6 +862,7 @@ namespace CalendarGenerator
             this.cellFiveSix.MaxLength = 500;
             this.cellFiveSix.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFiveSix.Name = "cellFiveSix";
+            this.cellFiveSix.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFiveSix.Size = new System.Drawing.Size(270, 175);
             this.cellFiveSix.TabIndex = 30;
             this.cellFiveSix.Text = "";
@@ -859,6 +887,7 @@ namespace CalendarGenerator
             this.cellFourSix.MaxLength = 500;
             this.cellFourSix.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellFourSix.Name = "cellFourSix";
+            this.cellFourSix.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellFourSix.Size = new System.Drawing.Size(270, 175);
             this.cellFourSix.TabIndex = 24;
             this.cellFourSix.Text = "";
@@ -883,6 +912,7 @@ namespace CalendarGenerator
             this.cellThreeSix.MaxLength = 500;
             this.cellThreeSix.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellThreeSix.Name = "cellThreeSix";
+            this.cellThreeSix.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellThreeSix.Size = new System.Drawing.Size(270, 175);
             this.cellThreeSix.TabIndex = 18;
             this.cellThreeSix.Text = "";
@@ -907,6 +937,7 @@ namespace CalendarGenerator
             this.cellTwoSix.MaxLength = 500;
             this.cellTwoSix.MinimumSize = new System.Drawing.Size(270, 175);
             this.cellTwoSix.Name = "cellTwoSix";
+            this.cellTwoSix.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.cellTwoSix.Size = new System.Drawing.Size(270, 175);
             this.cellTwoSix.TabIndex = 12;
             this.cellTwoSix.Text = "";

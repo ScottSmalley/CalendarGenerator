@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace CalendarGenerator
@@ -190,6 +191,10 @@ namespace CalendarGenerator
             if (textbox.Lines.Count() > 9)
             {
                 MessageBox.Show("Calendar will display a maximum of 9 lines.");
+                textbox.Text = textbox.Text.TrimEnd(new char[] { '\n' });
+                textbox.Select(textbox.Text.Length, 0);
+                textbox.ScrollToCaret();
+                
             }
         }
 
@@ -209,7 +214,7 @@ namespace CalendarGenerator
 
             foreach(RichTextBox box in textboxes)
             {
-                box.Text = "";
+                box.Clear();
             }
         }
 
