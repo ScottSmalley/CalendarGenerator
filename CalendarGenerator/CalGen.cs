@@ -237,7 +237,21 @@ namespace CalendarGenerator
             {
                 cellData.Add(box.Text);
             }
-            GenerateCalendar.Run(monthYearLbl.Text, dates, cellData);
+            /*
+             * Catch any issues for now.
+             * Future version: fix for the IOException
+             * that people commonly run into where they
+             * still have the previous PDF open when they
+             * try to create a secondary one.
+             */
+            try
+            {
+                GenerateCalendar.Run(monthYearLbl.Text, dates, cellData);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("You must close the old PDF calendar before creating a new one.");
+            }
         }
 
         /// <summary>
